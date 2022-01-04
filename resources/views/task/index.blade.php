@@ -13,7 +13,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="{{route('export',['format'=>'xlsx'])}}">XLSX</a></li>
                             <li><a class="dropdown-item" href="{{route('export',['format'=>'csv'])}}">CSV</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="{{route('export',['format'=>'PDF'])}}">PDF</a></li>
                         </ul>
 
                     </div>
