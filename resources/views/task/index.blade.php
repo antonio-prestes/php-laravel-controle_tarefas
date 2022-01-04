@@ -11,8 +11,8 @@
                             Exportar
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="{{route('export')}}">XLS</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="{{route('export',['format'=>'xlsx'])}}">XLSX</a></li>
+                            <li><a class="dropdown-item" href="{{route('export',['format'=>'csv'])}}">CSV</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
 

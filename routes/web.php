@@ -30,4 +30,4 @@ Route::get('/task', [TaskController::class, 'index'])->middleware('verified')->n
 Route::get('/task/{task}/edit', [TaskController::class, 'edit'])->middleware('verified')->name('edit');
 Route::post('/task/{task}/update', [TaskController::class, 'update'])->middleware('verified')->name('update');
 Route::delete('/task/{task}/delete', [TaskController::class, 'destroy'])->middleware('verified')->name('delete');
-Route::get('/task/export/', [TaskController::class, 'export'])->middleware('verified')->name('export');
+Route::get('/task/export/{format}', [TaskController::class, 'export'])->middleware('verified')->name('export');
