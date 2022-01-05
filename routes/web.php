@@ -31,3 +31,4 @@ Route::get('/task/{task}/edit', [TaskController::class, 'edit'])->middleware('ve
 Route::post('/task/{task}/update', [TaskController::class, 'update'])->middleware('verified')->name('update');
 Route::delete('/task/{task}/delete', [TaskController::class, 'destroy'])->middleware('verified')->name('delete');
 Route::get('/task/export/{format}', [TaskController::class, 'export'])->middleware('verified')->name('export');
+Route::get('/task/exportDOM', [TaskController::class, 'exportDOM'])->middleware('verified')->name('exportDOM');

@@ -14,6 +14,7 @@
                             <li><a class="dropdown-item" href="{{route('export',['format'=>'xlsx'])}}">XLSX</a></li>
                             <li><a class="dropdown-item" href="{{route('export',['format'=>'csv'])}}">CSV</a></li>
                             <li><a class="dropdown-item" href="{{route('export',['format'=>'PDF'])}}">PDF</a></li>
+                            <li><a class="dropdown-item" href="{{route('exportDOM')}}">PDF V2</a></li>
                         </ul>
 
                     </div>

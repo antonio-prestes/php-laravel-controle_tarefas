@@ -8,6 +8,7 @@ use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class TaskController extends Controller
 {
@@ -115,6 +116,13 @@ class TaskController extends Controller
 
     public function export($format)
     {
-        return Excel::download(new TasksExport, 'task'.'.'.$format);
+        return Excel::download(new TasksExport, 'task' . '.' . $format);
+    }
+
+    public function exportDOM()
+    {
+        $tasks = auth()->user()->tasks()->get();
+        $pdf = PDF::loadview('task.pdf',['tasks'=>$tasks]);
+        return $pdf->download('taskDOM.pdf');
     }
 }
